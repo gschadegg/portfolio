@@ -1,0 +1,425 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Montserrat";
+  text-rendering: optimizeLegibility;
+  height: 100vh;
+  width: 100%;
+  background: url(./../images/bg.webp) no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: -1;
+  }
+}
+.maskedLogo {
+  // width: 100px;
+  // height: 100px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./../images/logoClipBG.webp);
+  -webkit-mask-image: url(./../images/gs-Logo.svg);
+  mask-image: url(./../images/gs-Logo.svg);
+}
+#mainLogo {
+  position: relative;
+  height: 100px;
+  width: 0;
+  z-index: -1;
+  transition: all 0.4s, opacity 0.2s;
+  .maskedLogo {
+    margin-left: 30px;
+    transition: margin 0.4s ease-in, opacity 0.3s ease-in;
+    position: absolute;
+    opacity: 0;
+  }
+  .show & {
+    height: 100px;
+    width: 100px;
+    z-index: 0;
+    .maskedLogo {
+      margin-left: 0;
+      opacity: 1;
+      transition: margin 0.4s ease-out, opacity 0.3s ease-out;
+    }
+  }
+}
+#namePlate {
+  margin-left: 0;
+  transition: margin 0.4s ease-out;
+  .imgWrap {
+    transition: padding 0.4s ease-out;
+  }
+  .profileImage {
+    height: 71px;
+    width: 71px;
+    transition: all 0.4s ease-in;
+  }
+  .nameTitle,
+  .nameTitle div {
+    transition: opacity 0.4s ease-out, font-size 0.4s ease-out;
+  }
+  .show & {
+    margin-left: 32px;
+    .imgWrap {
+      // height: 74px;
+      // width: 74px;
+      padding: 0.25rem;
+    }
+    .profileImage {
+      height: 65px;
+      width: 65px;
+      transition: all 0.4s ease-out;
+    }
+    .nameTitle,
+    .nameTitle div {
+      opacity: 0;
+      font-size: 0;
+    }
+  }
+}
+#logoDivider {
+  width: 0;
+  opacity: 0;
+  margin-left: 0;
+  .show & {
+    opacity: 1;
+    margin-left: 20px;
+    width: auto;
+    transition: opacity 0.2s ease-in, width 0.1s;
+    transition-delay: 0.3s;
+  }
+}
+
+@layer base {
+  // a {
+  //   @apply text-2xl;
+  // }
+}
+
+@layer components {
+  .mainNavLink {
+    @apply hidden lg:block text-mainGray/80 text-lg font-medium mx-8 hover:text-brightAccent dottedTrim focus:text-brightAccent;
+    &.activeNav {
+      @apply text-brightAccent;
+    }
+  }
+  .mainNavIcon {
+    &.activeNav {
+      @apply border-mainGray;
+      svg {
+        @apply text-mainGray;
+      }
+    }
+  }
+
+  .mobileNav {
+    transition: all 0.3s ease-in;
+    transition-delay: 0.35s;
+    top: -100vh;
+    .mobileNavLinkList span {
+      opacity: 0;
+      transform: translateX(20px);
+      transition: all 0.2s;
+      $time-offset-close: 0;
+      @for $i from 3 through 1 {
+        &:nth-child(#{$i}) {
+          $time-offset-close: $time-offset-close + 0.1;
+          transition-delay: #{$time-offset-close}s;
+        }
+      }
+    }
+    .mobileNavLink {
+      @apply block text-slate-50/60 text-4xl mx-8 py-6 hover:text-slate-50 hover:text-5xl focus:text-slate-50 focus:text-5xl leading-10 hover:leading-10 focus:leading-10 transition-all;
+
+      &.activeNav {
+        @apply text-slate-50 hover:text-4xl focus:text-4xl;
+      }
+    }
+    .mobileProfileImg {
+      opacity: 0;
+      transition: all 0.4s;
+    }
+    .iconNav {
+      opacity: 0;
+      transition: all 0.4s;
+
+      .activeNav {
+        @apply border-slate-50 text-slate-50;
+        svg {
+          @apply text-slate-50;
+        }
+      }
+    }
+    &.hideMenu {
+    }
+    &.showMenu {
+      top: 0vh;
+      transition: all 0.4s ease-out;
+      transition-delay: 0s;
+      .iconNav {
+        transition-delay: 0.5s;
+        opacity: 1;
+      }
+      .mobileProfileImg {
+        transition-delay: 0.5s;
+        opacity: 1;
+      }
+      .mobileNavLinkList span {
+        opacity: 1;
+        transform: translateX(0);
+        backface-visibility: hidden;
+        $time-offset-open: 0.3;
+        animation: removeDelay 0.4s ease forwards;
+        @for $i from 1 through 3 {
+          &:nth-child(#{$i}) {
+            $time-offset-open: $time-offset-open + 0.1;
+            transition-delay: #{$time-offset-open}s;
+          }
+        }
+      }
+    }
+  }
+
+  a {
+    @apply text-2xl;
+  }
+  .largePortrait {
+    background: url(./../images/largePortrait.webp) center center no-repeat;
+    background-size: 180%;
+    @media (min-width: 480px) {
+      background-size: cover;
+    }
+    @media (min-width: 1024px) {
+      background-position: center bottom;
+    }
+  }
+  // .largePortrait {
+  //   &:before {
+  //     background: url(./../images/largePortrait.webp) center center no-repeat;
+  //     background-size: 180%;
+  //   }
+  //   @media (min-width: 480px) {
+  //     &:before {
+  //       background-size: cover;
+  //     }
+  //   }
+  //   @media (min-width: 1024px) {
+  //     &:before {
+  //       background-position: center bottom;
+  //     }
+  //   }
+  // }
+}
+
+@layer utilities {
+  *:focus {
+    outline: 0 !important;
+  }
+  .basicText {
+    @apply text-base;
+    color: #16142d;
+    font-weight: 500;
+  }
+  .basicButton {
+    @apply text-brightAccent font-bold text-lg flex py-3 items-center relative;
+  }
+  .boxHoverEffect {
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      left: -2%;
+      display: inline-block;
+      height: 1.5em;
+      width: 104%;
+      margin-top: 0px;
+      opacity: 0;
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
+    }
+    &:before {
+      border-left: 1px solid #150a7c;
+      border-right: 1px solid #150a7c;
+      -webkit-transform: scale(1, 0);
+      transform: scale(1, 0);
+    }
+    &:after {
+      border-bottom: 1px solid #150a7c;
+      border-top: 1px solid #150a7c;
+      -webkit-transform: scale(0, 1);
+      transform: scale(0, 1);
+    }
+    &:hover:after,
+    &:focus:after,
+    &:hover:before,
+    &:focus:before {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+
+  .removeOverflowLG {
+    @media (min-width: 1024px) {
+      overflow: inherit;
+    }
+  }
+  .imgWrap {
+    position: relative;
+    cursor: pointer;
+    &:before {
+      content: "";
+      position: absolute;
+      border-radius: 9999px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+      height: 100%;
+      width: 100%;
+      transition: all 0.1s ease-in;
+    }
+    &:hover:before,
+    &:active:before,
+    &:focus:before {
+      box-shadow: 0 0 8px 6px rgba(12, 7, 62, 0.7) inset;
+      background-color: rgba(29, 19, 122, 0.5);
+      z-index: 5;
+      transition: all 0.2s ease-out;
+    }
+  }
+
+  .imgDropArrow {
+    .imgWrap {
+      box-shadow: -2px -2px 6px 6px rgba(255, 255, 255, 0.7),
+        2px 2px 6px 6px rgba(0, 0, 0, 0.15);
+      position: relative;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      .imgWrap:before {
+        box-shadow: 0 0 8px 6px rgba(12, 7, 62, 0.7) inset;
+        background-color: rgba(29, 19, 122, 0.5);
+        z-index: 5;
+        transition: all 0.2s ease-out;
+      }
+    }
+  }
+  .dottedTrim {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      border-radius: 10px;
+      width: 0;
+      background-color: #150a7c;
+      bottom: -4px;
+      left: 0px;
+      box-shadow: 2px 0 0px 1px #fff, 10px 0px 0px 0px transparent,
+        12px 0 0px 1px #fff, 17px 0px 0px 0px transparent;
+      transition: all 0.1s ease-in;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      &:after {
+        width: 24px;
+        box-shadow: 2px 0 0px 1px #fff, 10px 0px 0px 0px #150a7c,
+          12px 0 0px 1px #fff, 17px 0px 0px 0px #150a7c;
+        transition: all 0.2s ease-out;
+      }
+    }
+    &.activeNav:after {
+      width: 24px;
+      box-shadow: 2px 0 0px 1px #fff, 10px 0px 0px 0px #150a7c,
+        12px 0 0px 1px #fff, 17px 0px 0px 0px #150a7c;
+      transition: all 0.2s ease-out;
+    }
+  }
+  .dottedTrimDown {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      top: 0;
+      border-radius: 10px;
+      height: 24px;
+      background-color: #150a7c;
+      // bottom: -4px;
+      left: 0px;
+      box-shadow: 0 2px 0px 1px #ebebea, 0px 10px 0px 0px #150a7c,
+        0 12px 0px 1px #ebebea, 0 17px 0px 0px #150a7c;
+      transition: all 0.1s ease-in;
+    }
+    // &:hover,
+    // &:focus,
+    // &:active {
+    //   &:after {
+    //     width: 24px;
+    //     box-shadow: 0 2px 0px 1px #ebebea, 0px 10px 0px 0px #150a7c, 0 12px 0px 1px #ebebea, 0 17px 0px 0px #150a7c;
+    //     transition: all 0.2s ease-out;
+    //   }
+    // }
+    // &.activeNav:after {
+    //   width: 24px;
+    //   box-shadow: 0 2px 0px 1px #ebebea, 0px 10px 0px 0px #150a7c, 0 12px 0px 1px #ebebea, 0 17px 0px 0px #150a7c;
+    //   transition: all 0.2s ease-out;
+    // }
+  }
+  .textBtnGradientHover {
+    @apply relative z-[0] pl-[24px];
+    transition: all 0.25s ease-in;
+    &:before {
+      @apply absolute content-[''] z-[-1] bg-brightAccent w-[15px] h-[2px] top-[50%] left-[0] translate-y-[-50%];
+      transition: all 0.25s ease-in;
+    }
+    &:hover,
+    &:focus {
+      @apply text-white;
+      transition: all 0.25s ease-out;
+      svg {
+        @apply text-white;
+        transition: all 0.25s ease-out;
+      }
+      &:before {
+        @apply h-[100%] w-[calc(100%+24px)] rounded-full bg-gradient-to-r from-brightAccent bg-gradient-to-br to-midPurple;
+        transition: all 0.25s ease-out;
+      }
+    }
+  }
+  .gradientBGHover {
+    @apply relative z-[0] transition-all duration-300;
+    &:before {
+      @apply content-[''] absolute inset-0 top-[50%] left-[50%] h-[0] w-[0] rounded-[50%] bg-gradient-to-r from-brightAccent bg-gradient-to-br to-midPurple opacity-0 z-[-1];
+      transition: all 0.25s, border-radius 0.45s;
+    }
+    &:hover,
+    &:focus {
+      @apply shadow-[0_0_9px_2px_rgb(255,255,255,0.5)];
+      &:before {
+        @apply top-[0] left-[0] w-[100%] h-[100%] opacity-100 rounded-xl;
+      }
+    }
+  }
+}
