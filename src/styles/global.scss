@@ -35,7 +35,7 @@ body {
   -webkit-mask-image: url(./../images/gs-Logo.svg);
   mask-image: url(./../images/gs-Logo.svg);
 }
-#mainLogo {
+#standardHeadLogo {
   position: relative;
   height: 100px;
   width: 0;
@@ -56,6 +56,10 @@ body {
       opacity: 1;
       transition: margin 0.4s ease-out, opacity 0.3s ease-out;
     }
+  }
+}
+#altHeadLogo {
+  &:before {
   }
 }
 #namePlate {
@@ -411,7 +415,7 @@ body {
   .gradientBGHover {
     @apply relative z-[0] transition-all duration-300;
     &:before {
-      @apply content-[''] absolute inset-0 top-[50%] left-[50%] h-[0] w-[0] rounded-[50%] bg-gradient-to-r from-brightAccent bg-gradient-to-br to-midPurple opacity-0 z-[-1];
+      @apply content-[''] absolute inset-0 top-[0] left-[0] h-[0] w-[0] rounded-[10px_50%_50%_50%] bg-gradient-to-r from-brightAccent bg-gradient-to-br to-midPurple opacity-0 z-[-1];
       transition: all 0.25s, border-radius 0.45s;
     }
     &:hover,

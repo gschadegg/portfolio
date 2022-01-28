@@ -5,6 +5,8 @@ import NamePlate from "./NamePlate/NamePlate";
 import MainNav from './MainNav'
 import MobileNav from "./MobileNav";
 import MaskedLogo from "../MaskedLogo/MaskedLogo";
+import { Icon } from '@iconify/react';
+
 
 const Header = ({standardHead=true, classes}) => {
     const [showMobileNav, setShowMobileNav] = useState(false)
@@ -27,42 +29,47 @@ const Header = ({standardHead=true, classes}) => {
             );
     },[])
 
-    const findMainEls = useCallback(() => {
-        let foundEl = document.querySelectorAll('.mainContent');
-        let currentEl
-        foundEl?.forEach(element => {
+    const findMainSections = useCallback(() => {
+        let foundSections = document.querySelectorAll('.mainContent');
+        let currentSection
+        foundSections?.forEach(element => {
             let valReturned = inViewPort(element)
             if (valReturned) {
               document.querySelectorAll('.activeNav')?.forEach((el) => el.classList.remove('activeNav'))
               element.classList.add("activeNav");
               document.querySelectorAll(`[data-navlocation=${element.id}]`)?.forEach((el) => el.classList.add('activeNav'))
-              currentEl = element.id
+              currentSection = element.id
             }
         });
-        if(currentEl === 'home'){
+        if(currentSection === 'home'){
             document.getElementById('leftHeader')?.classList.remove('show')
           }else{
             document.getElementById('leftHeader')?.classList.add('show')
           }
     },[inViewPort])
 
+    // If using standard header,track scrolling to mark nav
     useEffect(() => {
         if(standardHead){
-            findMainEls()
-            document.querySelector('main').addEventListener('scroll', findMainEls)
+            findMainSections()
+            document.querySelector('main').addEventListener('scroll', findMainSections)
         }
         
         return () => {
             if(standardHead){
-                document.querySelector('main').removeEventListener('scroll', findMainEls)
+                document.querySelector('main').removeEventListener('scroll', findMainSections)
             }
         }
-    }, [findMainEls, standardHead])
-
+    }, [findMainSections, standardHead])
+console.log('standardHead', standardHead)
    return (  
         <header className={`container mx-auto px-6 mt-7 mb-7 flex items-center justify-between ${classes ? classes.join(' ') : ''}`} >
             <section id='leftHeader' className={`flex items-center justify-start`}>
-                <Link id={ standardHead ? 'mainLogo' : ''} className={`flex hover:opacity-80 ${!standardHead && 'scale-50'}`} to={'/'} state={{ hash: 'home' }}><MaskedLogo /></Link>
+                <Link id={ standardHead ? 'standardHeadLogo' : 'altHeadLogo'} className={`flex hover:opacity-80 group ${!standardHead && 'scale-50'}`} to={'/'} state={{ hash: 'home' }}>
+                    { !standardHead ? 
+                        <Icon className='backArrow text-brightAccent transition-all absolute left-[-40px] top-[50%] translate-y-[-57%] group-hover:left-[-48px]' icon="bytesize:arrow-left" width='36'/>
+                        : null}
+                    <MaskedLogo /></Link>
                 { standardHead ?
                     <div id='logoDivider' className='font-normal text-2xl text-brightAccent/60'>/</div> : null }
                 {standardHead ?

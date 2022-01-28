@@ -6,6 +6,8 @@ import PropTypes from "prop-types"
 
 import Header from "./Header/Header"
 import MaskedLogo from "./MaskedLogo/MaskedLogo"
+import { Icon } from '@iconify/react';
+
 import "./layout.css"
 
 const Layout = ({ children, mainLayout=true }) => {
@@ -32,7 +34,8 @@ const Layout = ({ children, mainLayout=true }) => {
         </div> :
         <div className='flex flex-col h-screen lg:flex-row lg:container lg:px-6 lg:mx-auto'>
           <section className='mt-7 mb-7 hidden lg:flex lg:w-[100px] '>
-            <Link id={''} className={`flex fixed hover:opacity-80 focus:opacity-80 scale-50`} to={'/'} state={{ hash: 'home' }}>
+            <Link id={''} className={`flex fixed hover:opacity-80 focus:opacity-80 scale-50 group`} to={'/'} state={{ hash: 'home' }}>
+              <Icon className='text-brightAccent transition-all absolute left-[-40px] top-[50%] translate-y-[-57%] group-hover:left-[-48px]' icon="bytesize:arrow-left" width='36'/>
               <MaskedLogo /></Link></section>
           <Header standardHead={false} classes={['lg:hidden']}/>
           <main className='container flex-1 flex flex-col mx-auto md:pr-6 lg:flex-row overflow-y-auto removeOverflowLG'>
