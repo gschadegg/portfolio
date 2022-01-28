@@ -1,11 +1,14 @@
 import * as React from "react"
+import MainSectionContainer from "../Containers/MainSectionContainer"
 import PropTypes from "prop-types"
-import { Icon } from '@iconify/react';
+import { Icon } from "@iconify/react"
 
-const Work = ({  }) => (
-    <article id='latestWork' className={`mainContent container mx-auto min-h-screen`} >
-        Work Section
-    </article>
-)
-
+const Work = () => {
+  return (
+    <MainSectionContainer id="latestWork">
+      <section>about left col</section>
+      <section>about right col</section>
+    </MainSectionContainer>
+  )
+}
 export default Work

@@ -212,22 +212,69 @@ body {
       background-position: center bottom;
     }
   }
-  // .largePortrait {
-  //   &:before {
-  //     background: url(./../images/largePortrait.webp) center center no-repeat;
-  //     background-size: 180%;
-  //   }
-  //   @media (min-width: 480px) {
-  //     &:before {
-  //       background-size: cover;
-  //     }
-  //   }
-  //   @media (min-width: 1024px) {
-  //     &:before {
-  //       background-position: center bottom;
-  //     }
-  //   }
-  // }
+
+  #sideLineButton {
+    @apply fixed h-full hidden flex-col items-center opacity-100 w-[112px] transition-all lg:flex;
+    .topLine {
+      @apply w-[2px] bg-brightAccent/40 h-[calc(80%-148px)] transition-all mb-[48px];
+      &:after {
+        @apply bottom-[-24px] top-[unset] opacity-40 transition-all;
+      }
+    }
+    .btn_roundArrow {
+      @apply h-[52px] w-[52px] rounded-full border-brightAccent/10 border-8 opacity-100 text-brightAccent transition-all hover:border-brightAccent/30;
+      svg {
+        @apply text-brightAccent;
+      }
+      &.pointUp {
+        @apply rotate-[180deg];
+        svg {
+        }
+      }
+    }
+    .bottomLine {
+      @apply w-[2px] bg-brightAccent/40 h-[calc(20%-148px)] transition-all mt-[48px];
+      &:after {
+        @apply top-[-24px] opacity-40 transition-all;
+      }
+    }
+
+    &[data-pageplacement="home"] {
+      @apply opacity-0;
+      transition-delay: 0.2s;
+      .topLine {
+        @apply h-[0];
+        &:after {
+          @apply h-[0];
+        }
+      }
+      .bottomLine {
+        @apply h-[0];
+        &:after {
+          @apply h-[0];
+        }
+      }
+      .btn_roundArrow {
+        @apply opacity-0;
+      }
+    }
+    &.slide {
+      .topLine {
+        @apply h-[calc(80%-136px)];
+      }
+      .bottomLine {
+        @apply h-[calc(20%-160px)];
+      }
+      &[data-pageplacement="contact"] {
+        .topLine {
+          @apply h-[calc(80%-160px)];
+        }
+        .bottomLine {
+          @apply h-[calc(20%-136px)];
+        }
+      }
+    }
+  }
 }
 
 @layer utilities {
@@ -376,20 +423,24 @@ body {
         0 12px 0px 1px #ebebea, 0 17px 0px 0px #150a7c;
       transition: all 0.1s ease-in;
     }
-    // &:hover,
-    // &:focus,
-    // &:active {
-    //   &:after {
-    //     width: 24px;
-    //     box-shadow: 0 2px 0px 1px #ebebea, 0px 10px 0px 0px #150a7c, 0 12px 0px 1px #ebebea, 0 17px 0px 0px #150a7c;
-    //     transition: all 0.2s ease-out;
-    //   }
-    // }
-    // &.activeNav:after {
-    //   width: 24px;
-    //   box-shadow: 0 2px 0px 1px #ebebea, 0px 10px 0px 0px #150a7c, 0 12px 0px 1px #ebebea, 0 17px 0px 0px #150a7c;
-    //   transition: all 0.2s ease-out;
-    // }
+  }
+  .dottedTrimUp {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      top: 0;
+      border-radius: 10px;
+      height: 24px;
+      background-color: #150a7c;
+      // bottom: -4px;
+      left: 0px;
+      box-shadow: 0 -2px 0px 1px #ebebea, 0px -10px 0px 0px #150a7c,
+        0 -12px 0px 1px #ebebea, 0 -17px 0px 0px #150a7c;
+      transition: all 0.1s ease-in;
+    }
   }
   .textBtnGradientHover {
     @apply relative z-[0] pl-[24px];

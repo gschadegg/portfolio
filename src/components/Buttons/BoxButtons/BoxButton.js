@@ -18,8 +18,8 @@ const BoxButton = ({
   }
   const BoxTag = `${typesTags[tagType]}`
 
-  let additionalAttr =
-    tagType === "a" ? 'target="_blank" rel="noreferrer noopener"' : ""
+  // let additionalAttr =
+  //   tagType === "a" ? 'target="_blank" rel="noreferrer noopener"' : ""
   const baseClasses = accentBox
     ? "bg-brightAccent/80 text-white lg:h-[110%] lg:self-end "
     : "bg-brightAccent/10 text-brightAccent group hover:text-white focus:text-white transition-all"
@@ -31,10 +31,11 @@ const BoxButton = ({
     <>
       <BoxTag
         className={`m-1 gradientBGHover rounded-xl justify-center text-left p-6 min-w-[204] ${baseClasses} gradientBGHover
-            ${size === "tall" && accentBox !== true ? "flex-1" : "font-bold "}
+            ${size === "tall" && accentBox !== true ? "flex-1" : "font-bold"}
             ${classes?.join(" ")}`}
         {...args}
-        {...additionalAttr}
+        rel={tagType === "a" ? "noreferrer noopener" : ""}
+        target={tagType === "a" ? "_blank" : ""}
       >
         <Icon className={iconClasses} icon={iconName} width="48" />
         {children}

@@ -1,11 +1,15 @@
 import * as React from "react"
+import MainSectionContainer from "../Containers/MainSectionContainer"
 import PropTypes from "prop-types"
-import { Icon } from '@iconify/react';
+import { Icon } from "@iconify/react"
 
-const About = ({  }) => (
-    <article id='about' className={`mainContent container mx-auto min-h-screen`} >
-        About Section
-    </article>
-)
+const About = () => {
+  return (
+    <MainSectionContainer id="about">
+      <section>about left col</section>
+      <section>about right col</section>
+    </MainSectionContainer>
+  )
+}
 
 export default About

@@ -1,12 +1,11 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import { Icon } from "@iconify/react"
 import MaskedLogo from "../MaskedLogo/MaskedLogo"
 
-const Intro = ({ location }) => {
+const Intro = () => {
   return (
-    <article id="home" className={`mainContent container mx-auto min-h-screen`}>
+    <article id="home" className={`mainContent min-h-screen`}>
       <section
         data-sal="slide-up"
         data-sal-duration="400"
@@ -39,8 +38,9 @@ const Intro = ({ location }) => {
           >
             <Icon
               className="text-brightAccent transition-all translate-y-[-8px] translate-x-[8px] rotate-[45deg] group-hover:text-darkAccent"
-              icon="ic:sharp-keyboard-arrow-up"
-              width="48"
+              icon="eva:arrow-ios-upward-fill"
+              // icon="ic:sharp-keyboard-arrow-up"
+              width="44"
             />
           </div>
         </Link>

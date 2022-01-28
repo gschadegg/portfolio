@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useCallback } from "react"
 import Layout from "../components/layout"
 import MainNav from "../components/Header/MainNav"
-import Interests from "../components/Interests"
+import Interests from "../components/Interests/Interests"
 import Seo from "../components/seo"
 import TextButton from "../components/Buttons/TextButton"
-import { Icon } from "@iconify/react"
 import BoxButton from "../components/Buttons/BoxButtons/BoxButton"
 
 const ProfilePage = () => {
@@ -125,7 +124,7 @@ const ProfilePage = () => {
               <div className="flex flex-col flex-1">
                 <BoxButton
                   tagType="a"
-                  href="https://www.google.com"
+                  href="https://open.spotify.com/playlist/6Hs6Zk88p8WzbrB80mbwXz?si=0e9144b2893c4a1e"
                   iconName={"tabler:playlist"}
                 >
                   <span className="text-lg">My Jams List</span>
