@@ -2,8 +2,6 @@ import React, { useRef, useCallback, useEffect, useState } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
-// import { useStaticQuery, graphql } from "gatsby"
-
 import Header from "./Header/Header"
 import MaskedLogo from "./MaskedLogo/MaskedLogo"
 import { Icon } from "@iconify/react"
@@ -87,24 +85,13 @@ const Layout = ({ children, mainLayout = true }) => {
     }
   }, [findMainSections, mainLayout])
 
-  // siteTitle={data.site.siteMetadata?.title || `Title`}
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
-
   return (
     <>
       {mainLayout ? (
         <div className="flex flex-col h-screen">
           <Header />
           <main className="flex-1 overflow-y-auto ">
-            <section className="container mx-auto flex px-6">
+            <section className="container mx-auto flex px-6 transition">
               <SideLineButton
                 nextHash={mainContentSections.current[nextHashVal]}
               />
@@ -130,7 +117,7 @@ const Layout = ({ children, mainLayout = true }) => {
             </Link>
           </section>
           <Header standardHead={false} classes={["lg:hidden"]} />
-          <main className="container flex-1 flex flex-col mx-auto md:pr-6 lg:flex-row overflow-y-auto removeOverflowLG">
+          <main className="container flex-1 flex flex-col mx-auto md:pr-6 lg:flex-row overflow-y-auto removeOverflowLG transition">
             {children}
           </main>
         </div>
@@ -143,7 +130,6 @@ const Layout = ({ children, mainLayout = true }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   mainLayout: PropTypes.bool,
-  // mainLayout: PropTypes.node.isRequired,
 }
 
 export default Layout

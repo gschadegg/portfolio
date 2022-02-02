@@ -107,6 +107,32 @@ body {
 }
 
 @layer base {
+  *:focus {
+    outline: 0 !important;
+  }
+  .basicText {
+    @apply text-base;
+    color: #16142d;
+    font-weight: 500;
+  }
+  p.basicText {
+    @apply mt-6 text-sm;
+    &.med {
+      @apply text-base;
+    }
+    &.lg {
+      @apply text-lg;
+    }
+  }
+  .sectionHead {
+    @apply text-headerText/40 text-2xl font-medium mb-7;
+  }
+  .sectionHead_tag {
+    @apply text-brightAccent font-bold text-5xl mt-8;
+  }
+  .sectionSubhead {
+    @apply text-brightAccent/80 font-bold not-italic;
+  }
 }
 
 @layer components {
@@ -192,9 +218,6 @@ body {
     }
   }
 
-  a {
-    @apply text-2xl;
-  }
   .largePortrait {
     background: url(./../images/largePortrait.webp) center center no-repeat;
     background-size: 180%;
@@ -269,14 +292,10 @@ body {
 }
 
 @layer utilities {
-  *:focus {
-    outline: 0 !important;
-  }
-  .basicText {
-    @apply text-base;
-    color: #16142d;
-    font-weight: 500;
-  }
+  // *:focus {
+  //   outline: 0 !important;
+  // }
+
   .basicButton {
     @apply text-brightAccent font-bold text-lg flex py-3 items-center relative;
   }
@@ -438,6 +457,27 @@ body {
     transition: all 0.25s ease-in;
     &:before {
       @apply absolute content-[''] z-[-1] bg-brightAccent w-[15px] h-[2px] top-[50%] left-[0] translate-y-[-50%];
+      transition: all 0.25s ease-in;
+    }
+    &:hover,
+    &:focus {
+      @apply text-white;
+      transition: all 0.25s ease-out;
+      svg {
+        @apply text-white;
+        transition: all 0.25s ease-out;
+      }
+      &:before {
+        @apply h-[100%] w-[calc(100%+24px)] rounded-full bg-gradient-to-r from-brightAccent bg-gradient-to-br to-midPurple;
+        transition: all 0.25s ease-out;
+      }
+    }
+  }
+  .iconBtnGradientHover {
+    @apply relative z-[0] pl-[24px];
+    transition: all 0.25s ease-in;
+    &:before {
+      @apply absolute content-[''] z-[-1] bg-brightAccent w-[2px] h-[0] top-[50%] left-[0] translate-y-[-50%];
       transition: all 0.25s ease-in;
     }
     &:hover,

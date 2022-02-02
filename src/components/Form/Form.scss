@@ -1,0 +1,34 @@
+.contactForm_wrap {
+  @apply mx-12 my-20 flex flex-col;
+}
+.formGroup {
+  @apply flex flex-col mb-10;
+  label {
+    @apply text-white/70 text-sm font-bold mb-2;
+  }
+  input,
+  textarea {
+    @apply bg-[#CCCBD8]/30 rounded-lg text-slate-50 py-2 px-3;
+    box-shadow: 0 0 4px 1px rgba(230, 277, 255, 0.1) inset;
+
+    &:focus {
+      box-shadow: 0 0 4px 1px rgba(230, 277, 255, 0.8) inset;
+    }
+  }
+  input {
+    @apply h-[52px];
+  }
+  textarea {
+    @apply h-[160px];
+  }
+}
+.submitBtn {
+  @apply rounded-full bg-[#CCCBD8] text-brightAccent font-bold text-lg px-8 py-4 mt-4 self-center transition-all;
+  &:hover,
+  &:focus {
+    @apply bg-white text-xl;
+  }
+  &:disabled {
+    @apply text-lg bg-[#CCCBD8]/60 cursor-default;
+  }
+}
