@@ -1,14 +1,13 @@
-import * as React from "react"
-import MainSectionContainer from "../Containers/MainSectionContainer"
+import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-
-import PropTypes from "prop-types"
 import { Icon } from "@iconify/react"
+
+import MainSectionContainer from "../Containers/MainSectionContainer"
 import TextButton from "../Buttons/TextButton"
 
 const About = () => {
   return (
-    <MainSectionContainer id="about">
+    <MainSectionContainer id="about" classes={["mt-20"]}>
       <section
         data-sal="slide-up"
         data-sal-duration="400"
@@ -26,13 +25,13 @@ const About = () => {
           getting my hands dirty. I enjoy building anything from business sites
           to interactive web apps while focused on seeking opportunities that
           are meaningful and aligned with my passions. My stack preferences are
-          MERNG and JAMstack but I’m always interested in trying out new
+          MERN(G) and Jamstack but I’m always interested in trying out new
           technologies that I come across.
         </p>
         <p className="basicText">
           <em className="sectionSubhead">Tech Interests:</em> JavaScript, React,
           NodeJS, Express, Gatsby, MongoDB, Apollo, GraphQL, RESTful APIs,
-          TailwindCSS, HTML, SCSS, CSS, Git, Figma
+          TailwindCSS, HTML, SCSS, Styled Components, CSS, Git, Figma
         </p>
         <p className="basicText">
           <em className="sectionSubhead">Passions:</em> the Outdoors, Empowering
@@ -108,7 +107,7 @@ const About = () => {
           data-sal="slide-up"
           data-sal-duration="400"
           data-sal-easing="ease-out"
-          className="w-[80%] h-[64%] max-w-[600px] max-h-[600px] mt-16 rounded-xl relative z-0
+          className="w-[calc(100%-36px)] lg:w-[80%] h-[64%] max-w-[600px] max-h-[600px] mt-16 rounded-xl relative z-0
         after:content-[''] after:absolute after:bg-darkAccent/10 after:h-full after:w-full after:rounded-xl after:left-[40px] after:top-[40px] after:z-[-1]"
         >
           <StaticImage

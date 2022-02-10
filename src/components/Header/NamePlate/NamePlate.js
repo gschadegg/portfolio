@@ -18,7 +18,7 @@ const NamePlate = ({ ...args }) => (
         src="./../../../images/profileImg.png"
         width={71}
         quality={71}
-        placeholder={"none"}
+        placeholder={"blurred"}
         formats={["auto", "webp", "avif"]}
         alt="profile portrait"
         style={{ zIndex: 1 }}

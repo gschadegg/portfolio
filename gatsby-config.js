@@ -2,6 +2,8 @@ require("dotenv").config({
   path: `.env`,
 })
 
+const siteUrl = process.env.URL || "http://localhost:8000/"
+
 module.exports = {
   siteMetadata: {
     title: `Gretchen Schadegg Portfolio`,
@@ -24,8 +26,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `gs-portfolio`,
+        short_name: `gs`,
         start_url: `/`,
         background_color: `#663399`,
         // This will impact how browsers show your PWA/website
@@ -36,6 +38,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/projects`,
+      },
+    },
+    `gatsby-plugin-mdx`,
+    {
       resolve: `gatsby-plugin-sass`,
       options: {
         postCssPlugins: [
@@ -45,15 +55,30 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-portal`,
+      options: {
+        key: "modal",
+        id: "modal",
+      },
+    },
+    {
       resolve: "gatsby-plugin-sitemap",
       options: {
         output: `/sitemap.xml`,
       },
     },
     {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "siteUrl",
+        sitemap: `${siteUrl}/sitemap.xml`,
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
-        threshold: 0.5, // Percentage of an element's area that needs to be visible to launch animation
+        threshold: 0.4, // Percentage of an element's area that needs to be visible to launch animation
         once: true, // Defines if animation needs to be launched once
         disable: false, // Flag for disabling animations
 
@@ -66,9 +91,5 @@ module.exports = {
         exitEventName: "sal:out", // Exit event name
       },
     },
-
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

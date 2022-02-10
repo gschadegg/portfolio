@@ -6,15 +6,18 @@ import ContactForm from "../Form/ContactForm"
 
 const Contact = ({ isDesktop }) => {
   return (
-    <MainSectionContainer id="contact" classes={["items-center"]}>
+    <MainSectionContainer
+      id="contact"
+      classes={["items-center", "mb-4", "mt-24"]}
+    >
       <section
         data-sal="slide-up"
         data-sal-duration="400"
         data-sal-easing="ease-out"
-        className="flex flex-col flex-1 lg:max-w-[500px]"
+        className="flex flex-col flex-1 lg:max-w-[500px] lg:mb-[60px]"
       >
         <h2 className="sectionHead">
-          {/* About Me */}
+          Contact
           <div className="sectionHead_tag">Get In Touch</div>
         </h2>
         <p className="basicText lg">
@@ -32,7 +35,7 @@ const Contact = ({ isDesktop }) => {
                   width="28"
                 />
               </div>
-              Strifellc.MD@gmail.com
+              Drop Me an Email
             </IconButton>
             <IconButton to="/#" classes={["mt-4"]}>
               <div className="rounded-full border-[2px] border-brightAccent p-[4px] mr-4">
@@ -53,7 +56,7 @@ const Contact = ({ isDesktop }) => {
                 />
               </div>
               Freelance Status:
-              <div className="rounded-full bg-brightAccent text-white px-4 py-2 ml-2 text-base">
+              <div className="rounded-full bg-brightAccent text-white px-4 py-1 ml-2 text-base">
                 Available
               </div>
             </div>
@@ -65,8 +68,7 @@ const Contact = ({ isDesktop }) => {
           data-sal={isDesktop ? "slide-up" : null}
           data-sal-duration="400"
           data-sal-easing="ease-out"
-          className="w-full mt-16 lg:mt-0 lg:w-[80%] max-w-[550px] rounded-xl relative bg-headerText z-[0]
-        after:content-[''] after:absolute after:bg-darkAccent/10 after:h-full after:w-full after:rounded-xl after:left-[40px] after:top-[40px] after:z-[-1]"
+          className="w-full mt-16 lg:mt-0 lg:w-[80%] max-w-[550px] rounded-xl relative bg-headerText border-[#E8E9F1] border-2 shadow-[0_1px_5px_2px_rgba(11,7,49,0.25)]"
         >
           <ContactForm />
         </div>

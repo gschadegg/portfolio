@@ -24,7 +24,11 @@ body {
     background-color: rgba(255, 255, 255, 0.75);
     z-index: -1;
   }
+  &.noscroll #___gatsby {
+    overflow: hidden;
+  }
 }
+
 .maskedLogo {
   // width: 100px;
   // height: 100px;
@@ -111,8 +115,7 @@ body {
     outline: 0 !important;
   }
   .basicText {
-    @apply text-base;
-    color: #16142d;
+    @apply text-base text-[#16142d];
     font-weight: 500;
   }
   p.basicText {
@@ -123,15 +126,21 @@ body {
     &.lg {
       @apply text-lg;
     }
+    &.light {
+      @apply text-white/80;
+    }
   }
   .sectionHead {
     @apply text-headerText/40 text-2xl font-medium mb-7;
   }
   .sectionHead_tag {
-    @apply text-brightAccent font-bold text-5xl mt-8;
+    @apply text-brightAccent font-bold text-5xl mt-6;
   }
   .sectionSubhead {
     @apply text-brightAccent/80 font-bold not-italic;
+    &.light {
+      @apply text-white;
+    }
   }
 }
 
@@ -221,6 +230,9 @@ body {
   .largePortrait {
     background: url(./../images/largePortrait.webp) center center no-repeat;
     background-size: 180%;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
     @media (min-width: 480px) {
       background-size: cover;
     }
@@ -297,7 +309,13 @@ body {
   // }
 
   .basicButton {
-    @apply text-brightAccent font-bold text-lg flex py-3 items-center relative;
+    @apply text-brightAccent font-bold text-lg flex py-2 items-center relative;
+    &.sm {
+      @apply text-sm;
+    }
+    &.white {
+      @apply text-white;
+    }
   }
   .boxHoverEffect {
     &:after,
@@ -480,17 +498,39 @@ body {
       @apply absolute content-[''] z-[-1] bg-brightAccent w-[2px] h-[0] top-[50%] left-[0] translate-y-[-50%];
       transition: all 0.25s ease-in;
     }
+    div {
+      transition: all 0.25s ease-in;
+    }
     &:hover,
     &:focus {
       @apply text-white;
       transition: all 0.25s ease-out;
+      div {
+        @apply border-transparent;
+        transition: all 0.25s ease-out;
+      }
       svg {
         @apply text-white;
         transition: all 0.25s ease-out;
       }
       &:before {
-        @apply h-[100%] w-[calc(100%+24px)] rounded-full bg-gradient-to-r from-brightAccent bg-gradient-to-br to-midPurple;
+        @apply h-[calc(100%-16px)] w-[calc(100%+24px)] rounded-full bg-gradient-to-r from-brightAccent bg-gradient-to-br to-midPurple;
         transition: all 0.25s ease-out;
+      }
+    }
+    &.white {
+      &:before {
+      }
+      svg {
+        @apply text-white;
+      }
+      &:hover,
+      &:focus {
+        svg {
+        }
+        &:before {
+          @apply border-2 border-white/20 h-[calc(100%-14px)];
+        }
       }
     }
   }

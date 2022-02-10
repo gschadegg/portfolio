@@ -1,0 +1,52 @@
+[id*="activeModal"] {
+  @apply absolute top-0 left-0 w-full z-[1000] flex items-center justify-center overflow-auto min-h-full;
+  animation: slideLeft 0.2s linear;
+  scrollbar-gutter: stable both-edges;
+}
+
+.modal_overlay {
+  @apply bg-overlay/[.95] inset-0 fixed z-0;
+  backdrop-filter: blur(2px);
+}
+
+.modal_container {
+  @apply max-w-[1200px] flex flex-col relative w-[90%] z-[10] text-white/80 text-base lg:h-[80%] lg:w-[80%];
+  .closeBtn {
+    @apply text-base text-white/50 border-0 py-4 pr-4 mb-[80px] flex items-center cursor-pointer;
+
+    transition: color 0.1s;
+    &:hover,
+    &:focus {
+      @apply text-white;
+    }
+  }
+  .divider {
+    @apply h-[1px] w-[100px] bg-white/50 mt-8 mb-4;
+  }
+  ::-webkit-scrollbar {
+    @apply w-[4px];
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-headerText rounded-full;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-white/50 rounded-full;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-white/70;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}

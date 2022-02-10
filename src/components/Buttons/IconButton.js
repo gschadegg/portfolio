@@ -9,6 +9,8 @@ const IconButton = ({ children, classes, to, ...args }) => {
       className={`iconBtnGradientHover basicButton self-start ${classes?.join(
         " "
       )}`}
+      rel="noreferrer noopener"
+      target="_blank"
       {...args}
     >
       {children}
