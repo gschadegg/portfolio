@@ -6,7 +6,7 @@ const siteUrl = process.env.GATSBY_URL || "http://localhost:8000/"
 
 module.exports = {
   siteMetadata: {
-    title: `Gretchen Schadegg Portfolio`,
+    title: `Gretchen Schadegg`,
     description: `description here`,
     author: `@GS`,
     siteUrl: `https://portfoliomain50937.gatsbyjs.io/`,

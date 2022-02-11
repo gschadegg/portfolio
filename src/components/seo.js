@@ -31,6 +31,7 @@ function Seo({ description, lang, meta, image, title }) {
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
   const imageDisplay = `${site.siteMetadata?.siteUrl}${image || defaultImage}`
+  console.log(imageDisplay)
 
   return (
     <Helmet
