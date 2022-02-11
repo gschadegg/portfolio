@@ -82,6 +82,7 @@ module.exports = {
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
+    `gatsby-plugin-minify`,
     {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
