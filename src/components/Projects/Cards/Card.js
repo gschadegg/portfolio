@@ -16,7 +16,7 @@ const Card = ({ data, ...args }) => {
         onClick={() => modalRef.current.openModal()}
         onKeyDown={() => modalRef.current.openModal()}
         role="presentation"
-        className="cursor-pointer flex-[1_1_0] min-w-[340px] max-w-[430px] mx-auto lg:ml-0
+        className="cursor-pointer flex-[1_1_0] min-w-[100%] md:min-w-[340px] max-w-[430px] mx-auto lg:ml-0
         md:mr-[20px] mt-8 text-sm font-medium bg-white/60 rounded-xl
         text-brightAccent flex flex-col m-1
         shadow-[2px_4px_4px_0px_rgba(11,7,49,0.1)] hover:-translate-y-2

@@ -7,7 +7,7 @@ import TextButton from "../Buttons/TextButton"
 
 const About = () => {
   return (
-    <MainSectionContainer id="about" classes={["mt-20"]}>
+    <MainSectionContainer id="about" classes={["mt-8"]}>
       <section
         data-sal="slide-up"
         data-sal-duration="400"
@@ -28,7 +28,7 @@ const About = () => {
         <p className="basicText">
           <em className="sectionSubhead">Tech Interests:</em> JavaScript, React,
           NodeJS, Express, Gatsby, MongoDB, Apollo, GraphQL, RESTful APIs,
-          TailwindCSS, HTML, SCSS, Styled Components, CSS, Git, Figma
+          TailwindCSS, HTML, SCSS, CSS, Git, Figma
         </p>
         <p className="basicText">
           <em className="sectionSubhead">Passions:</em> the Outdoors, Mental
@@ -105,7 +105,7 @@ const About = () => {
           data-sal-duration="400"
           data-sal-easing="ease-out"
           className="w-[calc(100%-36px)] lg:w-[80%] h-[64%] max-w-[600px] max-h-[600px] mt-16 rounded-xl relative z-0
-        after:content-[''] after:absolute after:bg-darkAccent/10 after:h-full after:w-full after:rounded-xl after:left-[40px] after:top-[40px] after:z-[-1]"
+        after:content-[''] after:absolute after:bg-darkAccent/10 after:h-full after:w-full after:rounded-xl after:left-[10px] after:top-[10px] md:after:left-[40px] md:after:top-[40px] after:z-[-1]"
         >
           <StaticImage
             src="./../../images/aboutImg.webp"

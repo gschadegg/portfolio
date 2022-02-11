@@ -8,7 +8,7 @@ const Contact = ({ isDesktop }) => {
   return (
     <MainSectionContainer
       id="contact"
-      classes={["items-center", "mb-4", "mt-24"]}
+      classes={["items-center", "mb-4", "mt-16"]}
     >
       <section
         data-sal="slide-up"
@@ -47,7 +47,9 @@ const Contact = ({ isDesktop }) => {
               </div>
               Download CV
             </IconButton>
-            <div className={` basicButton self-start pl-[24px] mt-4`}>
+            <div
+              className={`basicButton self-start pl-[24px] mt-4 flex-wrap md:flex-nowrap`}
+            >
               <div className="rounded-full border-[2px] border-brightAccent p-[8px] mr-4">
                 <Icon
                   className="text-brightAccent flex-1"
@@ -56,7 +58,7 @@ const Contact = ({ isDesktop }) => {
                 />
               </div>
               Freelance Status:
-              <div className="rounded-full bg-brightAccent text-white px-4 py-1 ml-2 text-base">
+              <div className="rounded-full bg-brightAccent text-white px-4 py-1 text-base ml-[64px] md:ml-2">
                 Available
               </div>
             </div>

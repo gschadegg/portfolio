@@ -21,7 +21,7 @@ const ProjectModal = forwardRef(({ data, ...args }, ref) => {
         </section>
         <section
           className="mb-10 flex-1 rounded-xl lg:max-w-[60%] lg:mb-0 relative z-0 border-[#E8E9F1]/10 border-4
-        after:content-[''] after:absolute after:bg-white/[.05] after:h-full after:w-full after:rounded-xl after:left-[40px] after:top-[40px] after:z-[-1] "
+        after:content-[''] after:absolute after:bg-white/[.05] after:h-full after:w-full after:rounded-xl after:left-[10px] after:top-[10px] md:after:left-[40px] md:after:top-[40px] after:z-[-1] "
         >
           <div className="h-full max-h-[600px] lg:max-h-[calc(100vh-400px)] overflow-x-auto rounded-[6px] my-[4px] ml-[4px] mr-[6px] pr-[6px]">
             <div className="">

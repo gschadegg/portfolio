@@ -8,9 +8,8 @@
   }
   input,
   textarea {
-    @apply bg-[#CCCBD8]/30 rounded-lg text-slate-50 py-2 px-3;
+    @apply bg-[#CCCBD8]/30 rounded-lg text-slate-50 py-2 px-3 w-full;
     box-shadow: 0 0 4px 1px rgba(230, 277, 255, 0.1) inset;
-
     &:focus {
       box-shadow: 0 0 4px 1px rgba(230, 277, 255, 0.8) inset;
     }

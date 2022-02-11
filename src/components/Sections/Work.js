@@ -52,7 +52,7 @@ const Work = () => {
   })
 
   return (
-    <MainSectionContainer id="latestWork" classes={["mb-24"]}>
+    <MainSectionContainer id="latestWork" classes={["mb-16"]}>
       <section className="flex flex-col flex-1">
         <h2 className="sectionHead">Select Works</h2>
         <section className="flex flex-wrap mb-[16px] mt-2">{cardStack}</section>
