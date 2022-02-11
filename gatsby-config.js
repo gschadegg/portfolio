@@ -2,7 +2,7 @@ require("dotenv").config({
   path: `.env`,
 })
 
-const siteUrl = process.env.URL || "http://localhost:8000/"
+const siteUrl = process.env.GATSBY_URL || "http://localhost:8000/"
 
 module.exports = {
   siteMetadata: {
@@ -10,7 +10,6 @@ module.exports = {
     description: `description here`,
     author: `@GS`,
     siteUrl: `https://portfoliomain50937.gatsbyjs.io/`,
-    image: "./src/images/largePrtrait.webp",
     keywords: [
       "developer",
       "full stack",

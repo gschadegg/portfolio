@@ -9,6 +9,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import defaultImage from "./../images/largePortrait.webp"
 
 function Seo({ description, lang, meta, image, title }) {
   const { site } = useStaticQuery(
@@ -19,7 +20,6 @@ function Seo({ description, lang, meta, image, title }) {
             title
             description
             author
-            defaultImage: image
             keywords
             siteUrl
           }
@@ -30,9 +30,7 @@ function Seo({ description, lang, meta, image, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
-  const imageDisplay = `${site.siteMetadata?.siteUrl}${
-    image || site.siteMetadata?.defaultImage
-  }`
+  const imageDisplay = `${site.siteMetadata?.siteUrl}${image || defaultImage}`
 
   return (
     <Helmet

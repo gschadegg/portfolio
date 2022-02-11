@@ -16,17 +16,14 @@ const About = () => {
       >
         <h2 className="sectionHead">
           About Me
-          <div className="sectionHead_tag">
-            Here to help on your next project
-          </div>
+          <div className="sectionHead_tag">I'm a Full Stack Developer,</div>
         </h2>
         <p className="basicText">
-          I’m a Full Stack Developer with 8 years of experience and I love
-          getting my hands dirty. I enjoy building anything from business sites
-          to interactive web apps while focused on seeking opportunities that
-          are meaningful and aligned with my passions. My stack preferences are
-          MERN(G) and Jamstack but I’m always interested in trying out new
-          technologies that I come across.
+          with 8 years of experience and I love getting my hands dirty. I enjoy
+          building anything from business sites to interactive web apps while
+          focused on seeking opportunities that are meaningful and aligned with
+          my passions. My stack preferences are MERN(G) and Jamstack but I’m
+          always interested in trying out new technologies that I come across.
         </p>
         <p className="basicText">
           <em className="sectionSubhead">Tech Interests:</em> JavaScript, React,
@@ -34,8 +31,8 @@ const About = () => {
           TailwindCSS, HTML, SCSS, Styled Components, CSS, Git, Figma
         </p>
         <p className="basicText">
-          <em className="sectionSubhead">Passions:</em> the Outdoors, Empowering
-          Women, Mental Health, &amp; Charitably Giving Back
+          <em className="sectionSubhead">Passions:</em> the Outdoors, Mental
+          Health, Empowering Women, &amp; Charitably Giving Back
         </p>
         <TextButton to="/profile" classes={["mb-8", "mt-6"]}>
           Me, On a More Personal Note

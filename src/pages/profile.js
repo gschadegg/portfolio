@@ -105,7 +105,11 @@ const ProfilePage = () => {
               I’m always open to connecting, discussing a project, or geeking
               out over your favorite hikes.
             </p>
-            <TextButton to="/" hash="contact" classes={["mb-9", "mt-4"]}>
+            <TextButton
+              to="mailto:Strifellc.MD@gmail.com"
+              internalLink={false}
+              classes={["mb-9", "mt-4"]}
+            >
               Drop me a message
             </TextButton>
             <section

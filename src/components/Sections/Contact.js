@@ -27,7 +27,7 @@ const Contact = ({ isDesktop }) => {
 
         <section className="flex flex-col mt-10">
           <div className="flex flex-col flex-nowrap mb-[16px] mt-4">
-            <IconButton to="mailto:Strifellc.MD@gmail.com" classes={["mt-4"]}>
+            {/* <IconButton to="mailto:Strifellc.MD@gmail.com" classes={["mt-4"]}>
               <div className="rounded-full border-[2px] border-brightAccent p-[8px] mr-4">
                 <Icon
                   className="text-brightAccent flex-1"
@@ -36,7 +36,7 @@ const Contact = ({ isDesktop }) => {
                 />
               </div>
               Drop Me an Email
-            </IconButton>
+            </IconButton> */}
             <IconButton to="/#" classes={["mt-4"]}>
               <div className="rounded-full border-[2px] border-brightAccent p-[4px] mr-4">
                 <Icon
