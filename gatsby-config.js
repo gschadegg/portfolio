@@ -9,7 +9,15 @@ module.exports = {
     title: `Gretchen Schadegg Portfolio`,
     description: `description here`,
     author: `@GS`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://portfoliomain50937.gatsbyjs.io/`,
+    image: "./src/images/largePrtrait.webp",
+    keywords: [
+      "developer",
+      "full stack",
+      "full-stack",
+      "development",
+      "freelance developer",
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
