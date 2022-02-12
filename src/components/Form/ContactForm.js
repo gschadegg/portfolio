@@ -23,6 +23,12 @@ const ContactForm = () => {
   const handleSubmit = async e => {
     e.preventDefault()
     const token = await recaptchaRef.current.executeAsync()
+    const TYmessage = (
+      <>
+        <h3>Thanks for Your Message!</h3>
+        <p>I've recieved your message and will be in touch soon. </p>
+      </>
+    )
 
     if (token) {
       const form = e.target
@@ -33,12 +39,20 @@ const ContactForm = () => {
         data: new FormData(form),
       })
         .then(res => {
-          handleServerResponse(true, "Thanks!", form)
+          handleServerResponse(true, TYmessage, form)
         })
         .catch(res => {
           handleServerResponse(false, res.response.data.error, form)
         })
     }
+  }
+  if (serverState.status) {
+    setTimeout(() => {
+      setServerState({
+        submitting: false,
+        status: null,
+      })
+    }, 5000)
   }
 
   return (
@@ -58,7 +72,7 @@ const ContactForm = () => {
           name="message"
           id="message"
           required
-          placeholder="Add project details or something"
+          placeholder="Type your message here"
         ></textarea>
       </div>
       <ReCAPTCHA
@@ -74,9 +88,13 @@ const ContactForm = () => {
         Send Message
       </button>
       {serverState.status && (
-        <p className={!serverState.status.ok ? "errorMsg" : ""}>
+        <div
+          className={`responseMessage ${
+            !serverState.status.ok ? "errorMsg" : ""
+          }`}
+        >
           {serverState.status.msg}
-        </p>
+        </div>
       )}
     </form>
   )

@@ -1,5 +1,5 @@
 .contactForm_wrap {
-  @apply mx-12 my-20 flex flex-col;
+  @apply mx-12 my-20 flex flex-col relative;
 }
 .formGroup {
   @apply flex flex-col mb-10;
@@ -29,5 +29,12 @@
   }
   &:disabled {
     @apply text-lg bg-[#CCCBD8]/60 cursor-default;
+  }
+}
+
+.responseMessage {
+  @apply absolute w-full bg-headerText text-white bottom-0 transition-all;
+  h3 {
+    @apply font-bold text-3xl mb-4;
   }
 }
