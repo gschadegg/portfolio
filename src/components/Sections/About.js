@@ -16,7 +16,9 @@ const About = () => {
       >
         <h2 className="sectionHead">
           About Me
-          <div className="sectionHead_tag">I'm a Full Stack Developer,</div>
+          <div className="sectionHead_tag">
+            I'm a <br className="sm:hidden"></br>Full Stack Developer,
+          </div>
         </h2>
         <p className="basicText">
           with 8 years of experience and I love getting my hands dirty. I enjoy

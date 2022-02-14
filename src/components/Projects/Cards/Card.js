@@ -23,7 +23,7 @@ const Card = ({ data, ...args }) => {
         transition"
         {...args}
       >
-        <section className="bg-brightAccent/20 w-full rounded-t-xl h-[300px] relative">
+        <section className="bg-brightAccent/20 w-full rounded-t-xl max-h-[300px] relative">
           <Tag>{data.frontmatter.type}</Tag>
           <GatsbyImage
             image={coverImg}

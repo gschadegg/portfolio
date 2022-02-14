@@ -11,6 +11,7 @@ const NamePlate = ({ ...args }) => (
     to={"/profile/"}
     className={`cursor-pointer group imgDropArrow ${args.className}`}
     id="namePlate"
+    aria-label="My Profile"
   >
     <div className="rounded-full border-2 border-mainGray/10 p-1.5 group-hover:border-mainGray/20 imgWrap">
       {/* <Icon className='text-brightAccent opacity-0 absolute top-1/2 -left-1 -translate-y-2/4 z-0 group-hover:z-[5] group-focus:z-[5] group-hover:-left-9 group-focus:-left-9 group-hover:opacity-100 group-focus:opacity-100 transition-all duration-150' icon="ic:sharp-keyboard-arrow-left" width='36'/> */}
