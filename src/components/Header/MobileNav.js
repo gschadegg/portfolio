@@ -23,7 +23,7 @@ const MobileNav = ({
       >
         {/* <Icon className='text-slate-50 opacity-0 absolute top-1/2 -left-1 -translate-y-2/4 z-0 group-hover:z-[5] group-focus:z-[5] group-hover:-left-9 group-focus:-left-9 group-hover:opacity-100 group-focus:opacity-100 transition-all duration-150' icon="ic:sharp-keyboard-arrow-left" width='36'/> */}
         <StaticImage
-          src="./../../images/profileImg.png"
+          src="./../../images/profileImgSVG.svg"
           width={71}
           quality={71}
           formats={["auto", "webp", "avif"]}

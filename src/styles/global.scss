@@ -120,6 +120,9 @@ body {
   }
   p.basicText {
     @apply mt-6 text-sm;
+    &.sm {
+      @apply text-xs;
+    }
     &.med {
       @apply text-base;
     }

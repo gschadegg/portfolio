@@ -1,5 +1,5 @@
 .contactForm_wrap {
-  @apply mx-12 my-20 flex flex-col relative;
+  @apply mx-12 mt-20 mb-8 flex flex-col relative;
 }
 .formGroup {
   @apply flex flex-col mb-10;
@@ -37,4 +37,8 @@
   h3 {
     @apply font-bold text-3xl mb-4;
   }
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
 }

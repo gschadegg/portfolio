@@ -80,6 +80,7 @@ const ContactForm = () => {
         size="invisible"
         sitekey={`${process.env.GATSBY_GOOGLE_API_KEY}`}
       />
+
       <button
         className="submitBtn"
         type="submit"
@@ -87,6 +88,21 @@ const ContactForm = () => {
       >
         Send Message
       </button>
+      <p className="basicText text-white/40 sm text-center">
+        This site is protected by reCAPTCHA and the Google
+        <br />
+        <a className="underline" href="https://policies.google.com/privacy">
+          {" "}
+          Privacy Policy
+        </a>{" "}
+        and
+        <a className="underline" href="https://policies.google.com/terms">
+          {" "}
+          Terms of Service
+        </a>{" "}
+        apply.
+      </p>
+
       {serverState.status && (
         <div
           className={`responseMessage ${
