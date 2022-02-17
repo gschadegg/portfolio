@@ -22,7 +22,7 @@ const Contact = ({ isDesktop }) => {
         </h2>
         <p className="basicText lg">
           I like building things with fun open-minded people. Send me a message
-          and lets talk about your project!
+          and let's talk about your project!
         </p>
 
         <section className="flex flex-col mt-10">

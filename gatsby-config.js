@@ -7,7 +7,7 @@ const siteUrl = process.env.GATSBY_URL || "http://localhost:8000/"
 module.exports = {
   siteMetadata: {
     title: `Gretchen Schadegg`,
-    description: `description here`,
+    description: `Gretchen Schadegg is a full-stack developer with a passion for technology and the open web. She believes in creating interactive experiences that help people engage with their data in meaningful ways to better understand themselves, their surroundings, and the world. She currently is self-employed building interactive sites and web applications for clients and her own personal projects.`,
     author: `@GS`,
     siteUrl: `https://portfoliomain50937.gatsbyjs.io/`,
     keywords: [
