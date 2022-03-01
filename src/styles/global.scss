@@ -27,11 +27,12 @@ body {
   &.noscroll #___gatsby {
     overflow: hidden;
   }
+  * {
+    @apply selection:bg-brightAccent selection:text-white;
+  }
 }
 
 .maskedLogo {
-  // width: 100px;
-  // height: 100px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -307,10 +308,6 @@ body {
 }
 
 @layer utilities {
-  // *:focus {
-  //   outline: 0 !important;
-  // }
-
   .basicButton {
     @apply text-brightAccent font-bold text-lg flex py-2 items-center relative;
     &.sm {
