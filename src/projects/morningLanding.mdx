@@ -1,0 +1,45 @@
+---
+title: "Morning Landing"
+date: 2022-03-30
+type: "Mini App"
+focus: "NextJS & Local Storage"
+shortDesc: "A collection of React components built to showcase the immense range of possibilities when it comes to React."
+coverImg: "./../images/projects/morningLanding-cover.webp"
+coverImg_alt: "Display image of UI components and Storybook logo"
+mainDisplay: "./../images/projects/precise-mainDisplay.webp"
+mainDisplay_alt: "Full screen shot of Precise Systems home page"
+---
+
+import IconButton from "./../components/Buttons/IconButton"
+import { Icon } from "@iconify/react"
+
+This collection is a compilation of styled, responsive, interactive React components created using a variety of APIs and libraries. Check out the code or view the collection's Storybook library!
+
+<div className="divider"></div>
+
+<p className="basicText light">
+  <em className="sectionSubhead light">Tech Stack:</em> NextJS, React, Local
+  Storage, Formik, TailwindCSS, Modular SCSS
+</p>
+<p className="basicText light mb-10">
+  <em className="sectionSubhead light">My Role:</em> Designer & Developer
+</p>
+<IconButton to="https://morning-landing.vercel.app/" classes={["white"]}>
+  <div className="rounded-full border-[2px] border-white p-[8px] mr-4">
+    <Icon className="text-white flex-1" icon="entypo:rocket" width="24" />
+  </div>
+  View Live Project
+</IconButton>
+<IconButton
+  to="https://github.com/gschadegg/MorningLanding"
+  classes={["white", "mt-4", "mb-10"]}
+>
+  <div className="rounded-full border-[2px] border-white px-1 pt-1.5 mr-4">
+    <Icon
+      className="text-white flex-1"
+      icon="teenyicons:github-solid"
+      width="28"
+    />
+  </div>
+  View Code
+</IconButton>

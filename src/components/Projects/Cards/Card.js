@@ -34,11 +34,11 @@ const Card = ({ data, ...args }) => {
             objectPosition={"50% 20%"}
           />
         </section>
-        <section className="px-8 pt-8 pb-6 flex flex-col">
+        <section className="px-8 pt-8 pb-6 flex flex-col flex-1">
           <h3 className="text-headerText/60 font-bold text-2xl">
             {data.frontmatter.title}
           </h3>
-          <p className="basicText pt-0 pb-4 opacity-80">
+          <p className="basicText pt-0 pb-4 opacity-80 flex-1">
             {data.frontmatter.shortDesc}
           </p>
           <TextButton

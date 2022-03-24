@@ -17,7 +17,7 @@ const About = () => {
         <h2 className="sectionHead">
           About Me
           <div className="sectionHead_tag">
-            I'm a <br className="sm:hidden"></br>Full Stack Developer,
+            I'm a <br className="sm:hidden"></br>Front End Developer,
           </div>
         </h2>
         <p className="basicText">
@@ -29,8 +29,8 @@ const About = () => {
         </p>
         <p className="basicText">
           <em className="sectionSubhead">Tech Interests:</em> JavaScript, React,
-          NodeJS, Express, Gatsby, MongoDB, Apollo, GraphQL, RESTful APIs,
-          TailwindCSS, HTML, SCSS, CSS, Git, Figma
+          NodeJS, Express, NextJS, Gatsby, MongoDB, Apollo, GraphQL, RESTful
+          APIs, TailwindCSS, HTML, SCSS, CSS, Git, Figma
         </p>
         <p className="basicText">
           <em className="sectionSubhead">Passions:</em> the Outdoors, Mental
@@ -63,7 +63,7 @@ const About = () => {
             />
             <Icon
               className="text-brightAccent flex-1 pb-1.5 mx-[16px]"
-              icon="simple-icons:apollographql"
+              icon="file-icons:nextjs"
               width="40"
             />
           </div>
@@ -73,9 +73,15 @@ const About = () => {
               icon="akar-icons:gatsby-fill"
               width="40"
             />
-            <Icon
+
+            {/* <Icon
               className="text-brightAccent flex-1 pb-1.5 mx-[16px]"
               icon="akar-icons:javascript-fill"
+              width="40"
+            /> */}
+            <Icon
+              className="text-brightAccent flex-1 pb-1.5 mx-[16px]"
+              icon="simple-icons:apollographql"
               width="40"
             />
             <Icon
