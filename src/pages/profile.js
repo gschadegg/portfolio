@@ -130,7 +130,7 @@ const ProfilePage = () => {
                   <br />[ {latestProject.frontmatter.focus} ]
                 </div>
                 <p className="text-base">
-                  Check out the project I’ve been working on!
+                  Check out the project I've been working on!
                 </p>
               </BoxButton>
               <div className="flex flex-col lg:flex-row lg:w-full">
