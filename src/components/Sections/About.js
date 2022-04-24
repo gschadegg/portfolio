@@ -24,13 +24,13 @@ const About = () => {
           with 8 years of experience and I love getting my hands dirty. I enjoy
           building anything from business sites to interactive web apps while
           focused on seeking opportunities that are meaningful and aligned with
-          my passions. My stack preferences are MERN(G) and Jamstack but I’m
+          my passions. My stack preferences are MERN(G) and Jamstack but I'm
           always interested in trying out new technologies that I come across.
         </p>
         <p className="basicText">
           <em className="sectionSubhead">Tech Interests:</em> JavaScript, React,
           NodeJS, Express, NextJS, Gatsby, MongoDB, Apollo, GraphQL, RESTful
-          APIs, TailwindCSS, HTML, SCSS, CSS, Git, Figma
+          APIs, Jest, Cypress, TailwindCSS, HTML, SCSS, CSS, Git, Figma
         </p>
         <p className="basicText">
           <em className="sectionSubhead">Passions:</em> the Outdoors, Mental

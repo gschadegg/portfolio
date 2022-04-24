@@ -34,6 +34,12 @@ const ProfilePage = () => {
                 gatsbyImageData
               }
             }
+            mainDisplayVideoMP4 {
+              publicURL
+            }
+            mainDisplayVideoWEBM {
+              publicURL
+            }
             mainDisplay_alt
           }
           id
