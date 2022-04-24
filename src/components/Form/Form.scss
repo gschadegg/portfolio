@@ -33,7 +33,7 @@
 }
 
 .responseMessage {
-  @apply absolute w-full bg-headerText text-white bottom-0 transition-all;
+  @apply absolute w-full bg-headerText text-white bottom-0 transition-all py-[36px];
   h3 {
     @apply font-bold text-3xl mb-4;
   }
