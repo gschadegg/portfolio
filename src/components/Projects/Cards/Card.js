@@ -1,10 +1,11 @@
-import React, { useRef } from "react"
+import React, { useRef, Suspense } from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
 
 import TextButton from "../../Buttons/TextButton"
-import ProjectModal from "../Modals/ProjectModal"
 import Tag from "../Tag"
+
+const ProjectModal = React.lazy(() => import("../Modals/ProjectModal"))
 
 const Card = ({ data, ...args }) => {
   const modalRef = useRef()
@@ -50,7 +51,9 @@ const Card = ({ data, ...args }) => {
           </TextButton>
         </section>
       </article>
-      <ProjectModal ref={modalRef} data={data} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <ProjectModal ref={modalRef} data={data} />
+      </Suspense>
     </>
   )
 }

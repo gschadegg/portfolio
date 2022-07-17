@@ -58,8 +58,7 @@ const ProfilePage = () => {
         {/* Profile Image */}
         <section
           className={`transition-width flex flex-1 flex-col 
-    justify-end
-    bg-brightAccent/20 sm:rounded-xl w-full min-h-[400px] sm:w-full lg:flex-row lg:rounded-none lg:min-h-screen
+    justify-end bg-brightAccent/20 sm:rounded-xl w-full min-h-[400px] sm:w-full lg:flex-row lg:rounded-none lg:min-h-screen
     lg:fixed lg:w-full lg:max-w-[400px] xl:max-w-[550px] 2xl:max-w-[600px] largePortrait
     `}
         >
@@ -78,7 +77,7 @@ const ProfilePage = () => {
         {/* Spacer */}
         <section
           className="flex-1 flex-col 
-    sm:rounded-xl w-full min-h-[400px] sm:w-full lg:flex-row lg:rounded-none lg:min-h-screen
+    sm:rounded-xl w-full min-h-[400px] sm:w-full lg:min-w-[400px] lg:flex-row lg:rounded-none lg:min-h-screen
      lg:w-full lg:max-w-[400px] xl:max-w-[600px] hidden lg:flex"
         ></section>
 
@@ -97,7 +96,7 @@ const ProfilePage = () => {
               <span className="font-bold">Hey I'm </span>Gretchen,
             </h1>
             <p className="basicText">
-              I’ve spent the last few years as a nomadic developer, travelling
+              I've spent the last few years as a nomadic developer, travelling
               the United States with my family exploring the outdoors. My focus
               during this time has been on creating a heathier work / life
               balance and developing better tactics on how I spend my time. Life
@@ -108,7 +107,7 @@ const ProfilePage = () => {
             </h2>
             <Interests />
             <p className="basicText">
-              I’m always open to connecting, discussing a project, or geeking
+              I'm always open to connecting, discussing a project, or geeking
               out over your favorite hikes.
             </p>
             <TextButton

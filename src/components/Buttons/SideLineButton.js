@@ -1,28 +1,29 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import { Icon } from "@iconify/react"
 
 const SideLineButton = ({ nextHash }) => {
-  const sideLineBtnSlide = e => {
-    e.preventDefault()
-    document.getElementById("sideLineButton")?.classList.add("slide")
-  }
-  const clearSideLineBtnSlide = e => {
-    e.preventDefault()
-    document.getElementById("sideLineButton")?.classList.remove("slide")
-  }
+  const [isHovering, setIsHovering] = useState(false)
+
   return (
-    <div id="sideLineButton" data-pageplacement={"home"}>
+    <div
+      id="sideLineButton"
+      data-pageplacement={"home"}
+      className={isHovering ? "slide" : ""}
+    >
       <div className="topLine dottedTrimDown "></div>
       <Link
+        title={nextHash === "home" ? "Scroll to Top" : "Scroll Down"}
         to={"/"}
         state={{ hash: nextHash }}
-        className="btn_roundArrow group flex items-center justify-center"
-        onMouseEnter={sideLineBtnSlide}
-        onFocus={sideLineBtnSlide}
-        onMouseLeave={clearSideLineBtnSlide}
-        onBlur={clearSideLineBtnSlide}
+        className={`btn_roundArrow group flex items-center justify-center ${
+          nextHash === "home" ? "pointUp" : ""
+        }`}
+        onMouseEnter={() => setIsHovering(true)}
+        onFocus={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+        onBlur={() => setIsHovering(false)}
       >
         <Icon
           className=""

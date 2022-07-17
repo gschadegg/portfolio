@@ -59,7 +59,7 @@ const Contact = ({ isDesktop }) => {
               </div>
               Freelance Status:
               <div className="rounded-full bg-brightAccent text-white px-4 py-1 text-base ml-[64px] md:ml-2">
-                Available
+                Not Available
               </div>
             </div>
           </div>

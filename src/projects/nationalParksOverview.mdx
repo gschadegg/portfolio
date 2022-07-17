@@ -1,0 +1,48 @@
+---
+title: "National Parks View"
+date: 2022-03-22
+type: "API Consumer"
+focus: "React & NPS API"
+shortDesc: "Created with react, this view maps & displays a general overview of US National Parks."
+coverImg: "./../images/projects/nationalPark-cover.webp"
+coverImg_alt: "Display image of data page with nps logo"
+mainDisplay: "./../images/projects/nationalParks-mainDisplay.webp"
+mainDisplay_alt: "Full screen shot of National Parks View"
+---
+
+import IconButton from "./../components/Buttons/IconButton"
+import { Icon } from "@iconify/react"
+
+This React view was created to utilize and interact with NPS' free API. Fetching all US National Parks, it allows the user to switch between parks displaying the locations map and general information about the park.
+
+<div className="divider"></div>
+
+<p className="basicText light">
+  <em className="sectionSubhead light">Tech Stack:</em> React, SCSS, LeafletJS,
+  NPS API
+</p>
+<p className="mb-10 basicText light">
+  <em className="sectionSubhead light">My Role:</em> Developer
+</p>
+<IconButton
+  to="https://national-parks-overview-hx3gj8m7y-gschadegg.vercel.app/"
+  classes={["white"]}
+>
+  <div className="rounded-full border-[2px] border-white p-[8px] mr-4">
+    <Icon className="text-white flex-1" icon="entypo:rocket" width="24" />
+  </div>
+  View Live Project
+</IconButton>
+<IconButton
+  to="https://github.com/gschadegg/NationalParksOverview"
+  classes={["white", "mt-4", "mb-10"]}
+>
+  <div className="rounded-full border-[2px] border-white px-1 pt-1.5 mr-4">
+    <Icon
+      className="text-white flex-1"
+      icon="teenyicons:github-solid"
+      width="28"
+    />
+  </div>
+  View Code
+</IconButton>

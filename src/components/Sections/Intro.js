@@ -27,6 +27,7 @@ const Intro = () => {
         className="flex justify-center items-center justify-self-end"
       >
         <Link
+          title="Scroll Down"
           to="/"
           state={{ hash: "about" }}
           className="flex flex-col items-center group"
@@ -39,7 +40,6 @@ const Intro = () => {
             <Icon
               className="text-brightAccent transition-all translate-y-[-8px] translate-x-[8px] rotate-[45deg] group-hover:text-darkAccent"
               icon="eva:arrow-ios-upward-fill"
-              // icon="ic:sharp-keyboard-arrow-up"
               width="44"
             />
           </div>

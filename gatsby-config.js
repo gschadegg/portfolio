@@ -36,13 +36,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gs-portfolio`,
-        short_name: `gs`,
+        name: `Gretchen Schadegg's Personal Portfolio`,
+        short_name: `GS Portfolio`,
         start_url: `/`,
         background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/favicon.svg`, // This path is relative to the root of the site.
       },
@@ -62,13 +59,6 @@ module.exports = {
           require("tailwindcss"),
           require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-portal`,
-      options: {
-        key: "modal",
-        id: "modal",
       },
     },
     {

@@ -26,6 +26,7 @@ const Header = ({ standardHead = true, classes }) => {
     >
       <section id="leftHeader" className={`flex items-center justify-start`}>
         <Link
+          title="Go Home"
           id={standardHead ? "standardHeadLogo" : "altHeadLogo"}
           className={`flex hover:opacity-80 group ${
             !standardHead && "scale-50"

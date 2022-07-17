@@ -14,7 +14,6 @@ const ProjectModal = forwardRef(({ data, ...args }, ref) => {
   if (!mainDisplayMP4 && !mainDisplayWebm) {
     mainDisplayImg = getImage(data.frontmatter.mainDisplay)
   }
-
   return (
     <Modal ref={ref} {...args}>
       <article className="flex flex-col lg:flex-row justify-between items-start">

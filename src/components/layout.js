@@ -14,16 +14,10 @@ const Layout = ({ children, mainLayout = true }) => {
   const findNextHash = useCallback(
     currentSection => {
       let idxcurrent = mainContentSections.current.indexOf(currentSection)
-      let nextButton = document
-        .getElementById("sideLineButton")
-        ?.querySelector(".btn_roundArrow")
-
       if (idxcurrent === 3) {
         idxcurrent = 0
-        nextButton?.classList.add("pointUp")
       } else {
         idxcurrent += 1
-        nextButton?.classList.remove("pointUp")
       }
       setNextHashVal(idxcurrent)
     },
@@ -103,6 +97,7 @@ const Layout = ({ children, mainLayout = true }) => {
         <div className="flex flex-col h-screen lg:flex-row lg:container lg:px-6 lg:mx-auto">
           <section className="mt-7 mb-7 hidden lg:flex lg:w-[100px] ">
             <Link
+              title="Go Home"
               id={""}
               className={`flex fixed hover:opacity-80 focus:opacity-80 scale-50 group`}
               to={"/"}
