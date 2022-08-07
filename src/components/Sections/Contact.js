@@ -37,7 +37,7 @@ const Contact = ({ isDesktop }) => {
               </div>
               Drop Me an Email
             </IconButton> */}
-            <IconButton to="/#" classes={["mt-4"]}>
+            {/* <IconButton to="/#" classes={["mt-4"]}>
               <div className="rounded-full border-[2px] border-brightAccent p-[4px] mr-4">
                 <Icon
                   className="text-brightAccent flex-1"
@@ -46,6 +46,16 @@ const Contact = ({ isDesktop }) => {
                 />
               </div>
               Download CV
+            </IconButton> */}
+            <IconButton to="/#" classes={["mt-4"]}>
+              <div className="rounded-full border-[2px] border-brightAccent p-[8px] mr-4">
+                <Icon
+                  className="text-brightAccent flex-1"
+                  icon="ci:linkedin"
+                  width="28"
+                />
+              </div>
+              LinkedIn
             </IconButton>
             <div
               className={`basicButton self-start pl-[24px] mt-4 flex-wrap md:flex-nowrap`}
