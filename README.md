@@ -2,9 +2,9 @@
 
 # Personal Portfolio Site
 
-This is my new personal site built with Gatsby.js and hosted on Gatsby Cloud. I wanted to create a portfolio website that would showcase my work, skill set, and a little bit about myself. Went with Gatsby for it's fast speed and improved SEO, Markdown for Project data files, and TailWindCSS to minimize how much supporting CSS I would have to generate.
+This is my personal site built with Gatsby.js and hosted on Gatsby Cloud to showcase any side projects, skill set, and a little bit about myself. Went with Gatsby for it's speed and SEO benefits, included Markdown for Project data files, and TailWindCSS to minimize how much supporting CSS I would have to generate.
 
-Check out my live site [here](https://portfoliomain50937.gatsbyjs.io/)!
+Check out my live site [here](https://www.gretchenschadegg.dev/)!
 
 ## Tech Stack
 
