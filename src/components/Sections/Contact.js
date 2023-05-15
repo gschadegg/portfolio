@@ -47,7 +47,7 @@ const Contact = ({ isDesktop }) => {
               </div>
               Download CV
             </IconButton> */}
-            <IconButton to="/#" classes={["mt-4"]}>
+            <IconButton to="https://www.linkedin.com/in/gretchen-schadegg/" classes={["mt-4"]}>
               <div className="rounded-full border-[2px] border-brightAccent p-[8px] mr-4">
                 <Icon
                   className="text-brightAccent flex-1"

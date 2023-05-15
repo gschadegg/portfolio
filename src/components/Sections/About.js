@@ -29,8 +29,8 @@ const About = () => {
         </p>
         <p className="basicText">
           <em className="sectionSubhead">Tech Interests:</em> JavaScript, React,
-          NodeJS, Express, NextJS, Gatsby, MongoDB, Apollo, GraphQL, RESTful
-          APIs, Jest, Cypress, TailwindCSS, HTML, SCSS, CSS, Git, Figma
+          NextJS, Gatsby, NX, Redux, NodeJS, Express, MongoDB, RESTful APIs,
+          Jest, Playwright, Cypress, TailwindCSS, HTML, SCSS, CSS, Git, Figma
         </p>
         <p className="basicText">
           <em className="sectionSubhead">Passions:</em> the Outdoors, Mental
@@ -58,7 +58,7 @@ const About = () => {
             />
             <Icon
               className="text-brightAccent flex-1 pb-1.5 mx-[16px]"
-              icon="cib:graphql"
+              icon="cib:jest"
               width="40"
             />
             <Icon
@@ -81,7 +81,7 @@ const About = () => {
             /> */}
             <Icon
               className="text-brightAccent flex-1 pb-1.5 mx-[16px]"
-              icon="simple-icons:apollographql"
+              icon="file-icons:nx"
               width="40"
             />
             <Icon
