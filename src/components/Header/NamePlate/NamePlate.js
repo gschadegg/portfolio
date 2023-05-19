@@ -33,7 +33,7 @@ const NamePlate = ({ ...args }) => (
     <div className="hidden nameTitle lg:block ml-6 font-bold text-2xl text-mainGray group-hover:text-darkAccent group-focus:text-darkAccent group-active:text-darkAccent">
       Gretchen Schadegg
       <div className="text-left font-medium text-lg pt-0.5 text-mainGray/80 group-hover:text-darkAccent/80 group-focus:text-darkAccent/80 group-active:text-darkAccent/80">
-        Front End Developer
+        Front-end Developer
       </div>
     </div>
   </Link>

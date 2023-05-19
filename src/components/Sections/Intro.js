@@ -17,7 +17,7 @@ const Intro = () => {
           I'm Gretchen,
         </h1>
         <p className="text-lg text-darkText font-normal">
-          A nomadic Front End Developer, <br /> who likes to build things
+          A nomadic Front-end Developer, <br /> who likes to build things
         </p>
       </section>
       <div

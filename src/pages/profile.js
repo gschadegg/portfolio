@@ -107,8 +107,8 @@ const ProfilePage = () => {
             </h2>
             <Interests />
             <p className="basicText">
-              I'm always open to connecting, discussing a project, or geeking
-              out over your favorite hikes.
+              I'm always open to connecting, discussing exciting projects, or
+              simply geeking out over our favorite hikes
             </p>
             <TextButton
               to="mailto:Strifellc.MD@gmail.com"
