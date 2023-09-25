@@ -30,7 +30,7 @@ const BoxButton = ({
   return (
     <>
       <BoxTag
-        className={`m-1 gradientBGHover rounded-xl justify-center text-left p-6 min-w-[204] ${baseClasses} gradientBGHover
+        className={`m-1 gradientBGHover rounded-xl justify-center text-left p-6 min-w-[204] ${baseClasses}
             ${size === "tall" && accentBox !== true ? "flex-1" : "font-bold"}
             ${classes?.join(" ")}`}
         {...args}
