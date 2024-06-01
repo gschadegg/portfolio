@@ -16,18 +16,19 @@ const ProfilePage = () => {
   const isDesktop = useScreenSize()
   const modalRef = useRef()
   const travelMap = useRef()
-
+//sort: { fields: frontmatter___date, order: DESC }
   const data = useStaticQuery(graphql`
     query {
       allMdx(
-        filter: { fileAbsolutePath: { regex: "/projects/" } }
-        sort: { fields: frontmatter___date, order: DESC }
+        filter: { internal: { contentFilePath:{regex: "/projects/"}}}
+        sort: { frontmatter:{date:DESC }}
         limit: 1
       ) {
         nodes {
           frontmatter {
             title
             type
+            date
             focus
             mainDisplay {
               childImageSharp {
@@ -41,6 +42,11 @@ const ProfilePage = () => {
               publicURL
             }
             mainDisplay_alt
+            description 
+            stack
+            role
+            liveURL
+            gitURL
           }
           id
           body
@@ -129,13 +135,13 @@ const ProfilePage = () => {
               >
                 <div className="text-sm justify-start text-white/80 pb-6 pt-3">
                   <span className="font-bold text-xl text-white">
-                    Latest Project
+                    Latest Exploration
                   </span>
                   <br /> {latestProject.frontmatter.title}
                   <br />[ {latestProject.frontmatter.focus} ]
                 </div>
                 <p className="text-base">
-                  Check out the project I've been working on!
+                  Check out what I've been experimenting with!
                 </p>
               </BoxButton>
               <div className="flex flex-col lg:flex-row lg:w-full">

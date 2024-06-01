@@ -2,7 +2,7 @@ import * as React from "react"
 import MainSectionContainer from "../Containers/MainSectionContainer"
 import { Icon } from "@iconify/react"
 import IconButton from "../Buttons/IconButton"
-import ContactForm from "../Form/ContactForm"
+// import ContactForm from "../Form/ContactForm"
 
 const Contact = ({ isDesktop }) => {
   return (
@@ -20,10 +20,10 @@ const Contact = ({ isDesktop }) => {
           Contact
           <div className="sectionHead_tag">Get In Touch</div>
         </h2>
-        <p className="basicText lg">
+        {/* <p className="basicText lg">
           I like building things with fun open-minded people. Send me a message
           and let's talk about your project!
-        </p>
+        </p> */}
 
         <section className="flex flex-col mt-10">
           <div className="flex flex-col flex-nowrap mb-[16px] mt-4">
@@ -75,7 +75,7 @@ const Contact = ({ isDesktop }) => {
           </div>
         </section>
       </section>
-      <section className="w-full flex-1 flex justify-center mb-10">
+      {/* <section className="w-full flex-1 flex justify-center mb-10">
         <div
           data-sal={isDesktop ? "slide-up" : null}
           data-sal-duration="400"
@@ -84,7 +84,7 @@ const Contact = ({ isDesktop }) => {
         >
           <ContactForm />
         </div>
-      </section>
+      </section> */}
     </MainSectionContainer>
   )
 }

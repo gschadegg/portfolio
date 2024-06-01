@@ -75,7 +75,7 @@ const MobileNav = ({
           to="/"
           state={{ hash: "latestWork" }}
         >
-          Work
+          Sandbox
         </Link>
       </span>
     </div>

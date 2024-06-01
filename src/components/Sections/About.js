@@ -17,7 +17,7 @@ const About = () => {
         <h2 className="sectionHead">
           About Me
           <div className="sectionHead_tag">
-            I'm a <br className="sm:hidden"></br>Front-End Developer,
+            I'm a <br className="sm:hidden"></br>Software Engineer,
           </div>
         </h2>
         <p className="basicText">

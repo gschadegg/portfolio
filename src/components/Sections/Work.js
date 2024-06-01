@@ -5,18 +5,18 @@ import MainSectionContainer from "../Containers/MainSectionContainer"
 import Card from "./../Projects/Cards/Card"
 
 const Work = () => {
-  // date(formatString: "MMMM D, YYYY")
 
   const data = useStaticQuery(graphql`
     query {
       allMdx(
-        filter: { fileAbsolutePath: { regex: "/projects/" } }
-        sort: { fields: frontmatter___date, order: DESC }
+        filter: { internal: { contentFilePath:{regex: "/projects/"} } }
+        sort: { frontmatter:{date:DESC }}
       ) {
         nodes {
           frontmatter {
             title
             type
+            date
             shortDesc
             coverImg_alt
             coverImg {
@@ -36,6 +36,11 @@ const Work = () => {
               publicURL
             }
             mainDisplay_alt
+            description 
+            stack
+            role
+            liveURL
+            gitURL
           }
           id
           body
@@ -60,7 +65,7 @@ const Work = () => {
   return (
     <MainSectionContainer id="latestWork" classes={["mb-16"]}>
       <section className="flex flex-col flex-1">
-        <h2 className="sectionHead">Select Works</h2>
+        <h2 className="sectionHead">Sandbox</h2>
         <section className="flex flex-wrap mb-[16px] mt-2">{cardStack}</section>
       </section>
     </MainSectionContainer>
