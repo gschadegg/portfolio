@@ -94,7 +94,6 @@ module.exports = {
         exitEventName: "sal:out", // Exit event name
       },
     },
-    `gatsby-plugin-minify`,
-    'gatsby-plugin-netlify'
+    `gatsby-plugin-minify`
   ],
 }
