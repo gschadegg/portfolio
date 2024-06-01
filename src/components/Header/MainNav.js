@@ -23,7 +23,7 @@ const MainNav = ({ mobileNavClickHandler }) => {
         to={"/"}
         state={{ hash: "latestWork" }}
       >
-        Work
+        Sandbox{/* Work */}
       </Link>
       <div className="navIcons hidden lg:flex flex ml-9">
         <Link

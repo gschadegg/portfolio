@@ -1,11 +1,15 @@
 import React, { forwardRef } from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import Modal from "../../Containers/Modal/Modal"
+
+import ProjectModalContent from "./ProjectModalContent"
+
 import Tag from "../Tag"
 
-const ProjectModal = forwardRef(({ data, ...args }, ref) => {
+import Modal from "../../Containers/Modal/Modal"
+
+
+const ProjectModal = forwardRef(({ data, ...args  }, ref) => {
   let mainDisplayImg
 
   const mainDisplayMP4 = data.frontmatter.mainDisplayVideoMP4
@@ -14,6 +18,7 @@ const ProjectModal = forwardRef(({ data, ...args }, ref) => {
   if (!mainDisplayMP4 && !mainDisplayWebm) {
     mainDisplayImg = getImage(data.frontmatter.mainDisplay)
   }
+
   return (
     <Modal ref={ref} {...args}>
       <article className="flex flex-col lg:flex-row justify-between items-start">
@@ -22,7 +27,7 @@ const ProjectModal = forwardRef(({ data, ...args }, ref) => {
           <h3 className="font-bold text-4xl text-white/80 mt-6 mb-8">
             {data.frontmatter.title}
           </h3>
-          <MDXRenderer>{data.body}</MDXRenderer>
+          <ProjectModalContent data={data.frontmatter}/>
         </section>
         <section
           className="mb-10 flex-1 rounded-xl lg:max-w-[60%] lg:mb-0 relative z-0 border-[#E8E9F1]/10 border-4
