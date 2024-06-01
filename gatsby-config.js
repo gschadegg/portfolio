@@ -95,5 +95,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-minify`,
+    'gatsby-plugin-netlify'
   ],
 }
