@@ -21,26 +21,24 @@ const About = () => {
           </div>
         </h2>
         <p className="basicText">
-          with a passion for getting my hands dirty and bringing digital
-          experiences to life. With 8 years of experience under my belt, I've
-          had the pleasure of building a wide range of projects, from business
-          sites to interactive web apps. I'm always on the lookout for
-          meaningful opportunities that align with my passions and drive me
-          forward.
+        with a passion for getting my hands dirty and bringing digital experiences to life. 
+        With over 10 years of experience, I've had the pleasure of building a diverse range of projects, 
+        focusing on SaaS cloud applications. I'm constantly eager to explore and experiment with 
+        new technologies that capture my interest, which is one of the many reasons I love this ever-evolving field.
         </p>
         <p className="basicText">
-          When it comes to my tech stack, I have a current preference for MERN
-          and Jamstack. However, I'm constantly eager to explore and experiment
-          with new technologies that pique my interest.
+        I'm always seeking meaningful opportunities that align with my passions and propel me forward. 
+        I believe in the power of innovation and collaboration to create impactful solutions, 
+        and I'm keen to contribute my expertise to projects that make a difference.
         </p>
         <p className="basicText">
-          <em className="sectionSubhead">Tech Interests:</em> JavaScript, React,
-          NextJS, Gatsby, Nx, Redux, NodeJS, Express, MongoDB, RESTful APIs,
-          Jest, Playwright, Cypress, TailwindCSS, HTML, SCSS, CSS, Git, Figma
+          <em className="sectionSubhead">Tech Interests:</em> JavaScript, React, NextJS, TypeScript, Python, 
+          Flask, C#, Nx, NodeJS, Express, Gatsby, Docker, SQL, MongoDB, RESTful APIs, GraphQL, Jest, 
+          Playwright, Cypress, TailwindCSS, MUI, HTML, SCSS, CSS, Git, Figma
         </p>
         <p className="basicText">
           <em className="sectionSubhead">Passions:</em> the Outdoors, Mental
-          Health, Empowering Women, &amp; Charitably Giving Back
+          Health, Water Colors, Empowering Women, &amp; Charitably Giving Back
         </p>
         <TextButton to="/profile" classes={["mb-8", "mt-6"]}>
           Me, On a More Personal Note
@@ -55,6 +53,11 @@ const About = () => {
             <Icon
               className="text-brightAccent flex-1 pb-1.5 mx-[16px]"
               icon="akar-icons:react-fill"
+              width="40"
+            />
+            <Icon
+              className="text-brightAccent flex-1 pb-1.5 mx-[16px]"
+              icon="cib:python"
               width="40"
             />
             <Icon
@@ -74,17 +77,17 @@ const About = () => {
             />
           </div>
           <div className="flex flex-wrap mb-[16px]">
-            <Icon
+            {/* <Icon
               className="text-brightAccent flex-1 pb-1.5 mx-[16px]"
               icon="akar-icons:gatsby-fill"
               width="40"
-            />
-
-            {/* <Icon
-              className="text-brightAccent flex-1 pb-1.5 mx-[16px]"
-              icon="akar-icons:javascript-fill"
-              width="40"
             /> */}
+
+            <Icon
+              className="text-brightAccent flex-1 pb-1.5 mx-[16px]"
+              icon="cib:graphql"
+              width="40"
+            />
             <Icon
               className="text-brightAccent flex-1 pb-1.5 mx-[16px]"
               icon="file-icons:nx"
@@ -93,6 +96,11 @@ const About = () => {
             <Icon
               className="text-brightAccent flex-1 pb-1.5 mx-[16px]"
               icon="file-icons:tailwind"
+              width="40"
+            />
+            <Icon
+              className="text-brightAccent flex-1 pb-1.5 mx-[16px]"
+              icon="simple-icons:docker"
               width="40"
             />
             {/* <Icon

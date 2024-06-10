@@ -102,19 +102,17 @@ const ProfilePage = () => {
               <span className="font-bold">Hey I'm </span>Gretchen,
             </h1>
             <p className="basicText">
-              I've spent the last few years as a nomadic developer, travelling
-              the United States with my family exploring the outdoors. My focus
-              during this time has been on creating a heathier work / life
-              balance and developing better tactics on how I spend my time. Life
-              is short, so do what you love!
+            I've spent the last few years as a nomadic developer, travelling the United States with my family 
+            exploring the outdoors. My focus during this time has been on creating a heathier work / life balance 
+            and developing better tactics on how I spend my time. Life is short, so do what you love!
             </p>
             <h2 className="font-semibold text-center md:text-left text-darkText text-2xl mt-8">
               Outside of Coding I’m into
             </h2>
             <Interests />
             <p className="basicText">
-              I'm always open to connecting, discussing exciting projects, or
-              simply geeking out over our favorite hikes
+              I'm always open to connecting, discussing exciting projects, 
+              or simply reminiscing over our favorite hikes
             </p>
             <TextButton
               to="mailto:Strifellc.MD@gmail.com"
