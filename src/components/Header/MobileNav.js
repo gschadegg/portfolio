@@ -94,6 +94,7 @@ const MobileNav = ({
         />
       </Link>
       <a
+        aria-label="LinkedIn"
         className="rounded-full border-2 border-slate-50/30 p-1.5 mx-6 group hover:border-slate-50 focus:border-slate-50"
         href="https://www.linkedin.com/in/gretchen-schadegg/"
       >
@@ -104,6 +105,7 @@ const MobileNav = ({
         />
       </a>
       <a
+        aria-label="GitHub"
         className="rounded-full border-2 border-slate-50/30 px-1 pt-1.5 group hover:border-slate-50 focus:border-slate-50"
         href="https://github.com/gschadegg"
       >
